@@ -54,44 +54,30 @@
     "pub": "(pnpm i && pnpm run svgs:optimize && pnpm run build && pnpm run examples:build && pnpm run docs:build && pnpm run test && cp -r ./dist ./dist/dist && packito -d ./dist --nopublish && np --no-tests --no-publish && pnpm publish dist) || rm -r ./dist",
     "pub-preview": "(pnpm i && pnpm run svgs:optimize && pnpm run build && pnpm run examples:build && pnpm run docs:build && pnpm run test && cp -r ./dist ./dist/dist && packito -d ./dist --nopublish && np --preview --no-tests --no-publish)"
   },
-  "module": "./dist/index.js",
+  "module": "./src/index.ts",
   "main": "./dist/cjs/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/cjs/index.js",
-      "types": "./dist/index.d.ts"
+      "import": "./src/index.ts"
     },
     "./enums": {
-      "import": "./dist/enums.js",
-      "require": "./dist/cjs/enums.cjs",
-      "types": "./dist/enums.d.ts"
+      "import": "./src/enums.ts"
     },
     "./GamepadApiWrapper": {
-      "import": "./dist/GamepadApiWrapper.js",
-      "require": "./dist/cjs/GamepadApiWrapper.cjs",
-      "types": "./dist/GamepadApiWrapper.d.ts"
+      "import": "./src/GamepadApiWrapper.ts"
     },
     "./GamepadDisplay": {
-      "import": "./dist/GamepadDisplay.js",
-      "require": "./dist/cjs/GamepadDisplay.cjs",
-      "types": "./dist/GamepadDisplay.d.ts"
+      "import": "./src/GamepadDisplay.ts"
     },
     "./GamepadEmulator": {
-      "import": "./dist/GamepadEmulator.js",
-      "require": "./dist/cjs/GamepadEmulator.cjs",
-      "types": "./dist/GamepadEmulator.d.ts"
+      "import": "./src/GamepadEmulator.ts"
     },
     "./utilities": {
-      "import": "./dist/utilities.js",
-      "require": "./dist/cjs/utilities.cjs",
-      "types": "./dist/utilities.d.ts"
+      "import": "./src/utilities.ts"
     },
     "./helpers": {
-      "import": "./dist/helpers.js",
-      "require": "./dist/cjs/helpers.cjs",
-      "types": "./dist/helpers.d.ts"
+      "import": "./src/helpers.ts"
     },
     "./gamepad_assets/*": {
       "import": "./gamepad_assets/*",
